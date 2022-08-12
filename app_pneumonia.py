@@ -21,7 +21,7 @@ def upload_file():
         print(filename)
         file.save("./static/"+filename) #remove when cloud
         file = open("./static/"+filename,"r") #remove when cloud
-        model = load_model("Pneumonia")
+        model = load_model("pneumonia")
         image = cv2.imread("./static/"+filename) #remove for cloud
         gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY) #remove for cloud
         img = cv2.merge([gray,gray,gray]) #remove for cloud
